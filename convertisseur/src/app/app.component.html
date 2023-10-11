@@ -1,0 +1,33 @@
+<router-outlet></router-outlet>
+
+<div>
+  <span>Taux de change : </span>
+  <span>{{realRate}}</span>
+</div>
+
+<label class="switch">
+  <input type="checkbox" [(ngModel)]="switchValue" (change)="switchCurrency($event)">
+  <span class="slider round"></span>
+</label>
+<label>Taux fixe</label>
+<input type="number" [(ngModel)]="fixRate" [disabled]='disabledFixRateField'/>
+<input type="number" [(ngModel)]="initValue"/><span>{{startCurrency}}</span>
+<div>
+  <span>{{calculatedValue}}</span>
+  <span> {{endCurrency}}</span>
+</div>
+<button (click)="compute()">Calculer</button>
+<table>
+  <tr>
+    <th>Taux réel</th>
+    <th>Taux saisie</th>
+    <th>valeur initiale</th>
+    <th>valeur calculé</th>
+  </tr>
+  <tr  *ngFor="let historical of historicalList">
+    <td>{{historical.realRate}}</td>
+    <td>{{historical.fixRate}}</td>
+    <td><span>{{historical.start.value}}</span> <span> {{historical.start.currency}}</span></td>
+    <td><span>{{historical.end.value}}</span> <span> {{historical.end.currency}}</span>
+  </tr>
+</table>
