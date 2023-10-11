@@ -1,0 +1,11 @@
+- j'ai dans un premier temps lu plusieurs fois les taches demandés puis fait rapidement une maquette sur papier sur les éléments que j'avais besoin de façon très simplifier.
+- rajouter des commentaires
+- importer angular material pour générer, le switch, le tableau et d'autres
+- créer un formulaire
+- créer un composants 'convertisseur' pour que ça soit plus clair
+- créer un fichier de constante notament pour les devises
+- créer des tests
+- améliorer le rendu via une maquette créée au préalable (ajouter du css)
+- faire le polling
+- ameliorer la génération de la valeur aléatoire pour qu'elle soit comprise entre -0.5 et +0,5
+- n'afficher que les dernières éléments du tableau
